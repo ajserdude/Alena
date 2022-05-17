@@ -1,0 +1,121 @@
+{
+    "name": "Alena",
+    "description": "Alena bot - Extra featured, fully customisable WhatsApp User bot.",
+    "logo": "https://www.linkpicture.com/q/rgnk.jpg",
+    "keywords": ["WhatsApp", "Userbot", "Alena", "WhatsAsena", "bot", "api", "ai"],
+    "repository": "https://github.com/Afx-Abu/Alena",
+    "website":   "https://github.com/Afx-Abu/Alen",
+    "success_url": "https://github.com/Afx-Abu/Alen",
+    "stack": "container",
+    "env": {
+        "ALENA_CODE": {
+            "description": "Your QR session. Paste here yours Alena code.",
+            "required": true
+        },
+        "SUDO": {
+            "description": "Type Your Controling Number!",
+            "required": false,
+            "value":"917025994178,0"
+        },
+        "LANGUAGE": {
+            "description": "Bot language. English => en, Malayalam => ml, Hindi => HI,",
+            "required": true,
+            "value": "en"
+        },
+        "M_REPLY": {
+            "description": "Auto reply when mentioned.",
+            "required": true,
+            "value":"*Mention reply message here*"
+        },
+         "ALL_IMG": {
+            "description": "Give an image link for your bot!",
+            "required": true,
+            "value": "https://i.pinimg.com/originals/0e/c8/8c/0ec88ca1469125fc11b4ce76830602f4.jpg"
+        },
+        "DIALOGUE": {
+            "description": "Type anything here",
+            "required": true,
+            "value": "〽️ᴘᴏᴡᴇʀ ᴀʟʟᴇ ᴍᴡᴏɴᴜ❤️"
+        },
+        "ALL_CAPTION": {
+            "description": "Give your caption here. Example: Made by Alena.",
+            "required": true,
+            "value": "Caption message"
+        },
+        "VERIFIED": {
+            "description": "Jid given above the verified tick. Use 0 for official WhatsApp",
+            "required": true,
+            "value": "0@s.whatsapp.net"
+        },
+        "HANDLERS": {
+            "description": "Prefix for commands. You can also use 'false' for no prefix",
+            "required": true,
+            "value": "^[,@#!.]"
+        },
+        "HEROKU_API_KEY": {
+            "description": "Heroku API Key. (You can find it in account settings)",
+            "required": true
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Heroku APP Name.",
+            "required": true
+        },
+        "ALL_NUMBER": {
+            "description": "Type your number here",
+            "required": false,
+            "value": "wa.me/917025994178"
+        },
+        "V_HEADER": {
+            "description": "Shows on top of verified tick. Type any words here.",
+            "required": true,
+            "value": "Any words here"
+        },
+        "NO_ONLINE": {
+            "description": "Type true if you don't want to appear online.",
+            "required": false,
+            "value": "true"
+        },
+        "IG": {
+            "description": "Your instagram link(optional)!",
+            "required": false,
+            "value": "https://instagram.com/username"
+        },
+        "OWNER_NAME": {
+            "description": "Owner name used in many commands! Type your name here.",
+            "required": true,
+            "value": "Owner name"
+        },
+        "FIND_KEY": {
+            "description": "API key for .find command. Get it from https://dashboard.audd.io/",
+            "required": false,    
+            "value": ""
+        },
+        "TAKE_KEY": {
+            "description": "API key for .take command. Get it from https://api.imgbb.com/",
+            "required": false,    
+            "value": "90d68c15ad1aa89fe7c68bce44938648"
+        },
+        "STICKER_DATA": {
+            "description": "Sticker packname changer. Give any text here",
+            "required": false,    
+            "value": "Jsl|Alena"
+        },
+        "GROUP_LINK": {
+            "description": "Official group link of your bot.",
+            "required": true,    
+            "value": "https://chat.whatsapp.com/Dt3C4wrQmt0GG6io1IBIHb"
+        },
+        "BOT_NAME": {
+            "description": "Your bot's name. This is very important!",
+            "required": true,
+            "value": "Bot name"
+             
+        }
+    },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      }]
+  }
