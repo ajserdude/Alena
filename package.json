@@ -1,14 +1,14 @@
 {
-  "name": "Alena",
+  "name": "raganork",
   "version": "4.0.1",
-  "description": "Alena whatsapp bot- Modified version of Whatsasena by Yusuf usta.",
-  "main": "./Alena/index.js",
+  "description": "Raganork whatsapp bot- Modified version of Whatsasena by Yusuf usta.",
+  "main": "./Raganork/bot.js",
   "scripts": {
     "start": "supervisor -s index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Afx-Abu/Alena.git"
+    "url": "git+https://github.com/souravkl11/Raganork.git"
   },
   "keywords": [
     "whatsapp",
@@ -18,16 +18,16 @@
     "WhatsAsena"
   ],
   "author": "AsenaDev / Yusuf Usta",
-  "developer": "Alena / @Afx-Abu",
+  "developer": "Raganork / @souravkl11",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/Afx-Abu/Alena/issues"
+    "url": "https://github.com/souravkl11/Raganork/issues"
   },
-  "homepage": "https://github.com/Afx-Abu/Alena#readme",
+  "homepage": "https://github.com/souravkl11/Raganork#readme",
   "dependencies": {
     "file-type": "16.5.2",
     "nekobin": "0.0.1",
-    "raganork-bot": "2.0.1",
+    "raganork-bot": "1.9.8",
     "sequelize": "6.13.0",
     "supervisor": "0.12.0"
      }
