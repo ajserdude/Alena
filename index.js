@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const events = require("./events");
-const BgmDB = require('./plugins/sql/bgms');
 const chalk = require('chalk');
 const start = require('./data');
 const Sourav = require('./config');
