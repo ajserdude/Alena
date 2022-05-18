@@ -1,5 +1,5 @@
 build:
   docker:
-      worker: /plugins/sql/Dockerfile
+      worker: /Alena/Dockerfile
 run:
    worker: npm start
