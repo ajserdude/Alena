@@ -1,7 +1,6 @@
 let e = require('../events');
 let c = require('../config');
 let v = c.SESSION
-let {Fancy} = require('raganork-bot');
 let {MessageType} = require('@adiwajshing/baileys');
 let Language = require('../language');
 e.addCommand({pattern: 'fancy ?(.*)', fromMe: true, desc: 'Transforms normal text to cool fancy text. Reply to a text message'}, (async (m, q) => {
