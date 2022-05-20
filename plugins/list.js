@@ -1,6 +1,6 @@
 const jsl = require('../events');
 const Config = require('../config');
-const {abubuffer} = require('../buffer');
+const {abubuffer} = require('../data');
 const {MessageType} = require('@adiwajshing/baileys');
 const Language = require('../language');
 const Lang = Language.getString('_asena');
