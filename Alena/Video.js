@@ -1,1 +1,69 @@
-const _0x48b025=_0x2fd4;(function(_0x4a7a2b,_0x1888e1){const _0x48b382=_0x2fd4,_0x1b48d2=_0x4a7a2b();while(!![]){try{const _0x101e56=-parseInt(_0x48b382(0x191))/0x1+-parseInt(_0x48b382(0x185))/0x2*(parseInt(_0x48b382(0x179))/0x3)+parseInt(_0x48b382(0x176))/0x4*(-parseInt(_0x48b382(0x193))/0x5)+parseInt(_0x48b382(0x183))/0x6+-parseInt(_0x48b382(0x174))/0x7*(parseInt(_0x48b382(0x182))/0x8)+parseInt(_0x48b382(0x170))/0x9*(-parseInt(_0x48b382(0x18a))/0xa)+parseInt(_0x48b382(0x184))/0xb;if(_0x101e56===_0x1888e1)break;else _0x1b48d2['push'](_0x1b48d2['shift']());}catch(_0x2d5df2){_0x1b48d2['push'](_0x1b48d2['shift']());}}}(_0x2914,0xaa584));const {MessageType,Presence,MessageOptions}=require('@adiwajshing/baileys'),Base=require('./Base'),Message=require(_0x48b025(0x16f)),ReplyMessage=require(_0x48b025(0x17e));function _0x2914(){const _0x4d72fa=['sendRead','messageTimestamp','key','width','updatePresence','958072OzlsLd','fromMe','110joRcOA','message','download','mimetype','client','./Message','8298OnCZXf','url','downloadAndSaveMediaMessage','videoMessage','6195KVXzOy','reply','20804iKJCIu','split','remoteJid','838224McqVbJ','reply_message','data','sendMessage','low','./ReplyMessage','caption','quotedMessage','mediaKey','4136DUMRxp','1065624KwCPXD','37249443aGNnRT','8AQeqSS','contextInfo','jid','hasOwnProperty','height','2370Oqabph','_patch'];_0x2914=function(){return _0x4d72fa;};return _0x2914();}class Video extends Base{constructor(_0x2254e0,_0x47e899){super(_0x2254e0);if(_0x47e899)this['_patch'](_0x47e899);}[_0x48b025(0x18b)](_0x5133b9){const _0x1f5b88=_0x48b025;return this['id']=_0x5133b9[_0x1f5b88(0x18e)]['id']===undefined?undefined:_0x5133b9['key']['id'],this[_0x1f5b88(0x187)]=_0x5133b9[_0x1f5b88(0x18e)][_0x1f5b88(0x178)],this[_0x1f5b88(0x192)]=_0x5133b9['key'][_0x1f5b88(0x192)],this['caption']=_0x5133b9[_0x1f5b88(0x194)]['videoMessage'][_0x1f5b88(0x17f)]===null?_0x5133b9['message']['videoMessage']['caption']:'',this[_0x1f5b88(0x171)]=_0x5133b9[_0x1f5b88(0x194)][_0x1f5b88(0x173)][_0x1f5b88(0x171)],this['timestamp']=typeof _0x5133b9[_0x1f5b88(0x18d)]==='object'?_0x5133b9[_0x1f5b88(0x18d)][_0x1f5b88(0x17d)]:_0x5133b9[_0x1f5b88(0x18d)],this[_0x1f5b88(0x16d)]=_0x5133b9[_0x1f5b88(0x194)]['videoMessage'][_0x1f5b88(0x16d)],this[_0x1f5b88(0x189)]=_0x5133b9[_0x1f5b88(0x194)][_0x1f5b88(0x173)][_0x1f5b88(0x189)],this['width']=_0x5133b9['message']['videoMessage'][_0x1f5b88(0x18f)],this[_0x1f5b88(0x181)]=_0x5133b9[_0x1f5b88(0x194)][_0x1f5b88(0x173)][_0x1f5b88(0x181)],this[_0x1f5b88(0x17b)]=_0x5133b9,_0x5133b9[_0x1f5b88(0x194)][_0x1f5b88(0x173)][_0x1f5b88(0x188)](_0x1f5b88(0x186))&&_0x5133b9[_0x1f5b88(0x194)][_0x1f5b88(0x186)][_0x1f5b88(0x180)]?this[_0x1f5b88(0x17a)]=new ReplyMessage(this[_0x1f5b88(0x16e)],_0x5133b9[_0x1f5b88(0x194)][_0x1f5b88(0x173)][_0x1f5b88(0x186)]):this[_0x1f5b88(0x17a)]=![],super[_0x1f5b88(0x18b)](_0x5133b9);}async['delete'](){const _0x383724=_0x48b025;return await this[_0x383724(0x16e)]['deleteMessage'](this['jid'],{'id':this['id'],'remoteJid':this[_0x383724(0x187)],'fromMe':!![]});}async[_0x48b025(0x175)](_0x55851a){const _0x2459c9=_0x48b025;var _0x3a4689=await this['client']['sendMessage'](this['jid'],_0x55851a,MessageType['text'],{'quoted':this[_0x2459c9(0x17b)]});return new Message(this[_0x2459c9(0x16e)],_0x3a4689);}async[_0x48b025(0x17c)](_0x5cb9f0,_0x172558,_0x44406a){const _0x34190a=_0x48b025;return await this[_0x34190a(0x16e)][_0x34190a(0x17c)](this[_0x34190a(0x187)],_0x5cb9f0,_0x172558,_0x44406a);}async['sendTyping'](){const _0xdb0aee=_0x48b025;return await this['client'][_0xdb0aee(0x190)](this[_0xdb0aee(0x187)],Presence['composing']);}async[_0x48b025(0x18c)](){const _0x2a9a79=_0x48b025;return await this[_0x2a9a79(0x16e)]['chatRead'](this[_0x2a9a79(0x187)]);}async[_0x48b025(0x195)](_0x51f0d8=this['id']){const _0x5d6b79=_0x48b025;return await this[_0x5d6b79(0x16e)][_0x5d6b79(0x172)](this['data'],_0x51f0d8),this['id']+'.'+this['mimetype'][_0x5d6b79(0x177)]('/')[0x1];}};function _0x2fd4(_0x2c16e3,_0xc8944a){const _0x2914df=_0x2914();return _0x2fd4=function(_0x2fd47f,_0x18ff53){_0x2fd47f=_0x2fd47f-0x16d;let _0x8d5194=_0x2914df[_0x2fd47f];return _0x8d5194;},_0x2fd4(_0x2c16e3,_0xc8944a);}module['exports']=Video;
+/* Copyright (C) 2020 Yusuf Usta.
+
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+
+WhatsAsena - Yusuf Usta
+*/
+
+const {MessageType, Presence, MessageOptions} = require('@adiwajshing/baileys');
+const Base = require('./Base');
+const Message = require('./Message');
+const ReplyMessage = require('./ReplyMessage');
+
+class Video extends Base {
+    constructor(client, data) {
+        super(client);
+        if (data) this._patch(data);
+    }
+
+    _patch(data) {
+        this.id = data.key.id === undefined ? undefined : data.key.id;
+        this.jid = data.key.remoteJid;
+        this.fromMe = data.key.fromMe;
+        this.caption = data.message.videoMessage.caption === null ? data.message.videoMessage.caption : '';
+        this.url = data.message.videoMessage.url;
+        this.timestamp = typeof(data.messageTimestamp) === 'object' ? data.messageTimestamp.low : data.messageTimestamp;
+        this.mimetype = data.message.videoMessage.mimetype;
+        this.height = data.message.videoMessage.height;
+        this.width = data.message.videoMessage.width;
+        this.mediaKey = data.message.videoMessage.mediaKey;
+        this.data = data;
+        
+        if (data.message.videoMessage.hasOwnProperty('contextInfo') && data.message.contextInfo.quotedMessage) { 
+            this.reply_message = new ReplyMessage(this.client, data.message.videoMessage.contextInfo); }
+        else {
+            this.reply_message = false;
+        }
+        
+        return super._patch(data);
+    }
+
+    async delete() {
+        return await this.client.deleteMessage(this.jid, {id: this.id, remoteJid: this.jid, fromMe: true})
+    }
+
+    async reply(text) {
+        var message = await this.client.sendMessage(this.jid, text, MessageType.text, {quoted: this.data})
+        return new Message(this.client, message)
+    }
+
+    async sendMessage(content, type, options) {
+        return await this.client.sendMessage(this.jid, content, type, options)
+    }
+
+    async sendTyping() {
+        return await this.client.updatePresence(this.jid, Presence.composing) ;
+    }
+
+    async sendRead() {
+        return await this.client.chatRead(this.jid);
+    }
+
+    async download(location = this.id) {
+        await this.client.downloadAndSaveMediaMessage(this.data, location);
+        return this.id + '.' + this.mimetype.split('/')[1];
+    }
+};
+
+module.exports = Video;
