@@ -1,44 +1,46 @@
-const Alena = require('../events');
+const jsl = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
+const {execFile} = require('child_process');
+const cwebp = require('cwebp-bin');
 const Config = require('../config');
+const {abubuffer} = require('../data');
 const Language = require('../language');
-const {addInfo,skbuffer} = require('raganork-bot');
-const Lang = Language.getString('unvoice');
+const Lang = Language.getString('unvoice'); // Language support
 
-Alena.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
-    if (!message.reply_message) return;
-    var location = await message.client.downloadAndSaveMediaMessage({key: {remoteJid: message.reply_message.jid,id: message.reply_message.id },message: message.reply_message.data.quotedMessage});
+  jsl.addCommand({pattern: 'send ?(.*)', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
+  var img = await abubuffer(Config.ABU)
+    if (message.reply_message === false);
+    var location = await message.client.downloadAndSaveMediaMessage({
+        key: {
+            remoteJid: message.reply_message.jid,
+            id: message.reply_message.id
+        },
+        message: message.reply_message.data.quotedMessage
+    });
+let id = match[1];
     ffmpeg(location)
         .format('mp3')
         .save('output.mp3')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});});}));
+            await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true,quoted: { key: { participant : '0@s.whatsapp.net'},message: {orderMessage: {itemCount : 990,status: 1,surface : 1,message: Config.BOT,orderTitle: `THIS IS NEW?`,thumbnail: img, sellerJid: Config.JID }}}});
+});}));
 
-Alena.addCommand({pattern: 'mp3$', fromMe: true, desc: 'Converts video/voice message to audio'}, (async (message, match) => {    
-     var rm = message.reply_message
-     if (rm === false) return await message.client.sendMessage(message.jid, '_Reply to an audio or video!_', MessageType.text,{quoted: message.data});
-    if (!rm.audio && !rm.video) return await message.client.sendMessage(message.jid, '_Reply to an audio or video!_', MessageType.text,{quoted: message.data});
-    var location = await message.client.downloadAndSaveMediaMessage({key: {remoteJid: message.reply_message.jid,id: message.reply_message.id },message: message.reply_message.data.quotedMessage});
-        ffmpeg(location)
-            .save('tomp3.mp3')
-            .on('end', async () => {
-                await message.client.sendMessage(message.jid, fs.readFileSync('tomp3.mp3'), MessageType.audio, {quoted:message.data,mimetype: Mimetype.mp4Audio, ptt: false});
-            });
-        }));
-    Alena.addCommand({pattern: 'setinfo (.*)', fromMe: true, desc: 'Changes title, author, image info of audio files!'}, (async (message, match) => {    
-         if (!match[1].includes(';')) return await message.client.sendMessage(message.jid,'Wrong format! \n .setinfo Title;Artist;Description;Imagelink', MessageType.text);
-        if (message.reply_message === false) return await message.client.sendMessage(message.jid, '_Reply to a voice or video!_', MessageType.text);
-        var downloading = await message.client.sendMessage(message.jid,'_Please wait!_',MessageType.text);
-        var location = await message.client.downloadAndSaveMediaMessage({key: {remoteJid: message.reply_message.jid,id: message.reply_message.id },message: message.reply_message.data.quotedMessage});
-        ffmpeg(location)
-            .save('info.mp3')
-            .on('end', async () => {
-                var s = match[1].split(';')
-                var res = await addInfo('info.mp3',s[0],s[1],'Raganork Engine', await skbuffer(s[2]),Config.SESSION)
-                await message.client.sendMessage(message.jid, res, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
-            });
-        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-    }));
- 
+jsl.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
+    if (message.reply_message === false);
+    var location = await message.client.downloadAndSaveMediaMessage({
+        key: {
+            remoteJid: message.reply_message.jid,
+            id: message.reply_message.id
+        },
+        message: message.reply_message.data.quotedMessage
+    });
+
+    ffmpeg(location)
+        .format('mp3')
+        .save('output.mp3')
+        .on('end', async () => {
+            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+});}));
+}
